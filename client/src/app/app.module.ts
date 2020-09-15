@@ -11,7 +11,6 @@ import { HomeModule } from './home/home.module';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptors';
 
-
 @NgModule({
   declarations: [
     AppComponent
