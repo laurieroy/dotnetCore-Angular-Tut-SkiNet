@@ -27,6 +27,7 @@ export class BasketService {
       })
     );
   }
+
   setBasket(basket: IBasket) {
     return this.http.post(this.baseUrl + 'basket', basket).subscribe((response: IBasket) => {
       this.basketSource.next(response);
@@ -103,6 +104,7 @@ export class BasketService {
     const total = shipping + subtotal;
     this.basketTotalSource.next({shipping, total, subtotal});
   }
+  
   private createBasket(): IBasket {
     const basket = new Basket();
     localStorage.setItem('basket_id', basket.id);
